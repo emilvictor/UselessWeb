@@ -8,3 +8,19 @@ for (var i = 0; i < trumpClick; i++) {
         audio.play();
     });
 }
+
+document.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        var trump = document.querySelector(".trump-img");
+        trump.src = "/images/ufo.png";
+        document.addEventListener('keypress', function (e) {
+         if (e.key === 'Enter') {
+             for (i = 50; i >= 0; i--) {
+                trump.style.position = "absolute";
+                trump.style.top = i + "px";
+
+             }
+         }
+        });
+    }
+});
