@@ -1,26 +1,45 @@
-var trumpClick = document.querySelectorAll(".trump-img").length;
 
-for (var i = 0; i < trumpClick; i++) {
 
-    document.querySelectorAll(".trump-img")[i].addEventListener("click", function() {
+    //Array of sounds:
 
-        var audio = new Audio('sounds/fart.mp3');
-        audio.play();
-    });
-}
+    
+        const sounds = [
+            'sounds/fart.mp3',
+            'sounds/burp.mp3',
+            'sounds/monkey.mp3',
+            'sounds/fart2.mp3',
+           ];
+
+          
+        //Function that chooses a random sound from an array of sounds
+
+
+    // const trumpClick = document.querySelector('.trump-img');
+
+     //for (let i = 0; i< trumpClick; i++) {
+        document.querySelector(".trump-img").addEventListener("click", function() {
+            let audio = new Audio(sounds[Math.floor(Math.random() * sounds.length)]);
+            audio.play();
+            
+        })
+  
+
 
 document.addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
-        var trump = document.querySelector(".trump-img");
+        const trump = document.querySelector(".trump-img");
         trump.src = "/images/ufo.png";
         document.addEventListener('keypress', function (e) {
          if (e.key === 'Enter') {
-             for (i = 50; i >= 0; i--) {
-                trump.style.position = "absolute";
-                trump.style.top = i + "px";
-
-             }
+           trump.classList.add('img-new');        
          }
         });
     }
 });
+
+const scrollColor = document.querySelector('body');
+
+document.addEventListener('scroll', function(){
+    scrollColor.style.backgroundColor = "yellow";
+});
+
