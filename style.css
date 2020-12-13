@@ -16,12 +16,12 @@ body{
 
 
 
-h1 {
+h2 {
     text-align: center;
     color: steelblue;
     font-family: 'Fjalla One' , normal;
-    letter-spacing: 10px;
-    margin-top: 50px;
+    letter-spacing: 5px;
+    margin-top: 100px;
 }
 
 h3 {
@@ -29,15 +29,7 @@ h3 {
     color: steelblue;
     font-family: 'Fjalla One' , normal;
     letter-spacing: 3px;
-    margin-top: 50px;
-}
-
-h4 {
     margin-top: 100px;
-    text-align: center;
-    color: steelblue;
-    font-family: 'Fjalla One' , normal;
-    letter-spacing: 3px;
 }
 
 
@@ -108,9 +100,21 @@ footer {
     margin-top: 200px;
 }
 
+span{
+    color: rgb(10, 102, 67);
+}
+
+span:hover {
+    font-size: 20px;
+}
+
 p {
     text-align: center;
     font-family: 'Fjalla One';
     letter-spacing: 1px ;
+    color: rgb(38, 75, 82)
 
 }
+
+
+
